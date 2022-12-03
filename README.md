@@ -22,7 +22,14 @@
 
 3. **페이지 번호** 선택 버튼에서 1번이 아닌 버튼을 클릭한 후 **다시 1번 버튼을 누르면 처음 순서가 아닌 2번째 순서** 페이지가 출력되는 문제가 발생하였는데
 **프론트에서 페이지가 1부터 백엔드에서는 0부터 시작**하는 차이가 원인이었고 **PageRequest.of**을 통해 Pageable 객체 생성시 page인자에 **page ⇒** **page-1**로 수정함으로써 해결하였습니다.  
- 
+
+![KakaoTalk_20221201_202236465](https://user-images.githubusercontent.com/109947297/205433146-526cd6bd-fb4f-4d64-97dc-3b142301bf3c.png)
+![KakaoTalk_20221201_202236717](https://user-images.githubusercontent.com/109947297/205433150-83ddfd22-010a-49bc-bf49-dfccd7f58aac.png)
+
+
+4. **Github에 Spring Boot 프로젝트 파일 커밋**시 **.maven 폴더와 .settings 폴더가 push 되지 않아 다른 팀원들이 pull 한 후**에 프로젝트를 import를 시도했을 때 **import가 불가능**한 문제가 발생하였는데 
+해당 프로젝트의 .gitignore 파일에서 해당 부분을 지우고 commit+push를 하니 .maven 폴더와 .settings 폴더가 **GitHub에 성공적으로 push**되었고 **import도 정상적으로 가능**함을 확인함으로써 해결하였습니다.
+
 ---
 
 ![DB 다이어그램](https://user-images.githubusercontent.com/109947297/204556659-6a031f66-6cca-4772-8572-ebec675812d7.PNG)
